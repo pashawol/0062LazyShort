@@ -1,11 +1,13 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		.container.section
+			+b.section-title
+				h1 Ленивый Шорт
+				p От +3% прибыли ежедневно и без суеты
+				p Работающие точки входа для стабильного заработка на падении акций США
+			img(src="img/head-img.png", alt="").head-img
+			a.btn.btn-primary(href="#sForm") Забрать торговую систему
+			
+
 	// end headerBlock

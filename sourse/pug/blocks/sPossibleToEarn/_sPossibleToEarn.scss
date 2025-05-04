@@ -1,0 +1,81 @@
+// start .sPossibleToEarn
+.sPossibleToEarn {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	&__inner {
+		background: #13151a;
+		color: #fff;
+		padding: 6px;
+		border-radius: rem(32);
+		img {
+			order: 1;
+			@include media-breakpoint-up(md) {
+				max-width: 50%;
+				float: right;
+			}
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
+	&__footer {
+		background-color: $primary;
+		padding: rem(26) rem(30);
+		border-radius: rem(26);
+		font-weight: bold;
+		font-size: rem(18);
+		margin-top: auto;
+		@include media-breakpoint-up(xl) {
+			max-width: 50%;
+		}
+	}
+	ul {
+		padding-top: 32px;
+		padding-left: rem(32);
+		padding-right: rem(32);
+	}
+	li {
+		list-style: none;
+		position: relative;
+		padding-left: rem(38);
+		margin-bottom: rem(20);
+		&::before {
+			content: url(../img/svg/marker.svg);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPossibleToEarn

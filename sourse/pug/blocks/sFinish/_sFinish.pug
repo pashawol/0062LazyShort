@@ -1,0 +1,24 @@
+mixin sFinish(data)
+	// start sFinish
+	+b.SECTION.sFinish.section#sFinish&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Дочитали до конца и все еще  откладываете решение?
+				p Если Вы все еще здесь, значит Вам интересно, но Вы в чем-то сомневаетесь.
+					br
+					| Полистайте мои сделки, пока не надоест бороться со своими сомнениями, и Вы не прислушаетесь к своему желанию.
+					br
+					strong Каждую из этих сделок я выкладывал публично в Телеграм-канале.
+			+defSlider()
+				- for (var i = 0; i < 3; i++) 
+					//- +e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
+					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/slide.png`)
+						img(src="img/slide.png" width="640" height="389" alt="").res-i 
+			+e.inner
+				.h4.mb-4 Все эти сделки совершались в вальяжном режиме. Спокойно и без нервов.
+					br
+					| Хотите зарабатывать также?
+					br
+					| Вы знаете, что нужно делать.
+				a.btn.btn-primary(href="#sForm") Жмите здесь, чтобы начать зарабатывать на падении акций США
+	// end sFinish

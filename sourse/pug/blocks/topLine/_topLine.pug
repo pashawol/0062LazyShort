@@ -2,8 +2,11 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col-md-auto.col
+					+e.logo
+						+img('img/logo.svg')
+				.col-md-auto.col-auto.order-md-last
+					a.btn.btn-sm.btn-outline-dark(href="#sForm") Получить доступ сейчас
+				.col-md.d-none.d-md-block: .small Умный автоматический источник дохода
 	// end topLine

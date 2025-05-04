@@ -1,0 +1,53 @@
+// start .sMyName
+.sMyName {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+	p {
+		font-size: rem(20);
+	}
+	.h4 {
+		margin-bottom: rem(40);
+	}
+	&__text {
+		text-align: center;
+		span {
+			display: inline;
+			background-color: $primary;
+			color: #fff;
+			@include rfs(40px);
+			font-weight: bold;
+			line-height: 1.2;
+			padding-inline: 0.5em;
+		}
+		svg {
+			stroke-linecap: round;
+			margin-top: rem(40);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMyName

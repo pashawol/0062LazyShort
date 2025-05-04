@@ -8,11 +8,30 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='')
+mixin ddGroupItem(txt, activeClasses='', sub)
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+		+e.head.dd-head-js
+			div
+				div=txt
+				.text-secondary= sub
+			+e.arrow
+				<svg width="64" height="64" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="0.5" y="63.5" width="63" height="63" rx="31.5" transform="rotate(-90 0.5 63.5)" stroke="url(#paint0_linear_8005_28310)"/>
+					<path d="M29 24L37 31.9988L29 39.9988" stroke="url(#paint1_linear_8005_28310)"/>
+					<defs>
+					<linearGradient id="paint0_linear_8005_28310" x1="0" y1="64" x2="66.1307" y2="67.5619" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#A7186E"/>
+					<stop offset="1" stop-color="#FFA936"/>
+					</linearGradient>
+					<linearGradient id="paint1_linear_8005_28310" x1="29" y1="24" x2="37.2843" y2="24.2231" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#A7186E"/>
+					<stop offset="1" stop-color="#FFA936"/>
+					</linearGradient>
+					</defs>
+					</svg>
+
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block

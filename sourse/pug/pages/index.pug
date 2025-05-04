@@ -1,9 +1,22 @@
 extends ../layout/main.pug
 
-include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/headerBlock/_headerBlock.pug 
+include ../blocks/topLine/_topLine.pug
+include ../blocks/footer/_footer.pug 
+
+include ../blocks/sPossibleToEarn/_sPossibleToEarn.pug 
+include ../blocks/sMyName/_sMyName.pug 
+include ../blocks/sInvent/_sInvent.pug 
+include ../blocks/sHowWorks/_sHowWorks.pug 
+include ../blocks/sWillItWork/_sWillItWork.pug 
+include ../blocks/sHowMuchEarn/_sHowMuchEarn.pug 
+include ../blocks/sCharacteresticks/_sCharacteresticks.pug 
+
+include ../blocks/sQA/_sQA.pug 
+include ../blocks/sFinish/_sFinish.pug 
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
- 
+
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
@@ -20,13 +33,17 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+parts('header')
+	+topLine
 	main
-		+icon("truck")
-		//- iframe( src="https://kinescope.io/e2XNJwJpavG2tdvfcveMaD", width="900", height="500", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
-		+headerBlock 
-		+sCatalog
-		+sForm()
-		+sContact()
-		
-	+parts('footer')
+		+headerBlock
+		+sPossibleToEarn
+		+sMyName
+		+sInvent
+		+sHowWorks
+		+sWillItWork
+		+sHowMuchEarn
+		+sCharacteresticks
+
+		+sQA
+		+sFinish
+	+footer

@@ -1,0 +1,27 @@
+mixin sHowMuchEarn(data)
+	// start sHowMuchEarn
+	+b.SECTION.sHowMuchEarn.section#sHowMuchEarn&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сколько можно зарабатывать?
+			.h3.strong.text-secondary В моем Телеграм-канале я каждый торговый день делюсь списком потенциальных акций на падение.
+			.h6.mb-4 Позже я выкладываю разбор точек входа и выхода.
+			.h4.text-center.mb-4 Раз в неделю подвожу результаты, подтвержденные публично:
+			+defSlider()
+				- for (var i = 0; i < 3; i++) 
+					//- +e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
+					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/slide.png`)
+						img(src="img/slide.png" width="640" height="389" alt="").res-i 
+			.text-center
+				a.btn.btn-primary(href="#sForm") Смотреть свежие отчеты в Телеграм-канале
+			.h4.mb-4 В среднем:
+			+e.row
+				mixin item(t, p)
+					+e.item
+						+e.title.text-primary.h2.mb-3= t
+						p.text-secondary= p
+				+item("50%","акций из отобранного списка падают и дают понятную точку входа.")
+				+item("5-6%","дает прибыли одна сделка")
+				+item("в 1 из 3 ","срабатывает стоп")
+				+item("1:3-1:7","соотношение риска  к прибыли ")
+	// end sHowMuchEarn

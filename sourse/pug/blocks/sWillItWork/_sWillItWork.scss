@@ -1,0 +1,40 @@
+// start .sWillItWork
+.sWillItWork {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+		background-image: url(../img/sWillItWork-bg.jpg);
+		@include bgs;
+		color: #fff;
+		padding: rem(40);
+		border-radius: rem(40);
+		@include media-breakpoint-up(lg) {
+			padding: rem(80);
+		}
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sWillItWork
