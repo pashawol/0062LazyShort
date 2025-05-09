@@ -10,7 +10,12 @@ include ../blocks/sInvent/_sInvent.pug
 include ../blocks/sHowWorks/_sHowWorks.pug 
 include ../blocks/sWillItWork/_sWillItWork.pug 
 include ../blocks/sHowMuchEarn/_sHowMuchEarn.pug 
-include ../blocks/sCharacteresticks/_sCharacteresticks.pug 
+include ../blocks/sCharacteresticks/_sCharacteresticks.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sHowStudy/_sHowStudy.pug
+include ../blocks/sArguments/_sArguments.pug
+include ../blocks/sAdv/_sAdv.pug
+include ../blocks/sOneStep/_sOneStep.pug
 
 include ../blocks/sQA/_sQA.pug 
 include ../blocks/sFinish/_sFinish.pug 
@@ -43,7 +48,12 @@ block pagecontent
 		+sWillItWork
 		+sHowMuchEarn
 		+sCharacteresticks
-
+		+sAbout
+		+sHowStudy
+		.dark-block
+			+sArguments
+			+sAdv
+			+sOneStep
 		+sQA
 		+sFinish
 	+footer

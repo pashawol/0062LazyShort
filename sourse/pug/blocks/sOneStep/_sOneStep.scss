@@ -1,0 +1,137 @@
+// start .sOneStep
+.sOneStep {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+		span {
+			position: relative;
+			&::after {
+				content: url(../img/svg/arrow.svg);
+				position: relative;
+				top: 1.2em;
+				margin-left: 0.4em;
+			}
+		}
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	.inner-block {
+		@include media-breakpoint-up(lg) {
+			padding-inline: rem(70);
+		}
+		background: linear-gradient(93.08deg, #a7186e 0%, #ffa936 98.33%);
+	}
+
+	&__items {
+		display: grid;
+		gap: rem(24);
+		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+		counter-reset: num;
+		margin-bottom: 64px;
+	}
+
+	&__head {
+		.h5 {
+			opacity: 0.5;
+		}
+		margin-bottom: 40px;
+	}
+
+	&__item {
+		position: relative;
+		&:not(:last-child):after {
+			content: url(../img/svg/arrow.svg);
+			top: -1em;
+			margin-left: 0.4em;
+			position: absolute;
+			left: rem(60);
+			rotate: -30deg;
+		}
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			@include rfs(40px);
+			font-family: "Zen Kaku Gothic New";
+			display: block;
+			border-radius: 50%;
+			width: rem(44);
+			height: rem(44);
+			aspect-ratio: 1;
+			border: 4px solid $primary;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			line-height: 1;
+			margin-bottom: 1rem;
+		}
+	}
+	.form-wrap {
+		background-color: #fff;
+		border-radius: rem(20);
+		padding: rem(40);
+		color: $body-color;
+		@include media-breakpoint-down(md) {
+			margin-inline: rem(-16);
+		}
+	}
+	.form-grid {
+		display: grid;
+		@include media-breakpoint-up(xl) {
+			grid-template-columns: repeat(3, 1fr) 150px;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		gap: 2rem 9px;
+		margin-bottom: 1rem;
+		.btn {
+			margin-top: 0;
+			padding: 17px;
+			min-width: 100%;
+		}
+	}
+	.form-group {
+		position: relative;
+		z-index: 2;
+		&::before {
+			background-image: linear-gradient(
+				45deg,
+				var(--bs-primary),
+				var(--bs-warning)
+			);
+			content: "";
+			inset: 0;
+			position: absolute;
+			border-radius: var(--bs-border-radius);
+		}
+	}
+	input {
+		background-color: #fff;
+		border-color: transparent;
+		z-index: 2;
+		position: relative;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sOneStep

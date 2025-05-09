@@ -1,0 +1,65 @@
+// start .sArguments
+.sArguments {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		margin-bottom: 64px;
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+		background-color: inherit;
+		border-radius: 24px;
+		background-image: linear-gradient(
+			45deg,
+			var(--bs-primary),
+			var(--bs-warning)
+		);
+		padding: 2.5rem;
+		position: relative;
+		z-index: 2;
+		&::before {
+			content: "";
+			position: absolute;
+			background: #1f0919;
+			border-radius: inherit;
+			inset: 1px;
+			z-index: -1;
+			position: absolute;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sArguments
+
+.inner-block {
+	background-image: url(../img/inner-bg.jpg);
+	@include bgs;
+	border-radius: 40px;
+	padding: rem(64) 1rem;
+	.btn {
+		margin-top: 40px;
+	}
+}

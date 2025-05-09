@@ -8,12 +8,12 @@ mixin sHowMuchEarn(data)
 			.h6.mb-4 Позже я выкладываю разбор точек входа и выхода.
 			.h4.text-center.mb-4 Раз в неделю подвожу результаты, подтвержденные публично:
 			+defSlider()
-				- for (var i = 0; i < 3; i++) 
+				- for (var i = 1; i < 16; i++) 
 					//- +e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
-					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/slide.png`)
-						img(src="img/slide.png" width="640" height="389" alt="").res-i 
+					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/results/img-${i}.png`)
+						img(src=`img/results/img-${i}.png` width="640" height="389" alt="").res-i 
 			.text-center
-				a.btn.btn-primary(href="#sForm") Смотреть свежие отчеты в Телеграм-канале
+				a.btn.btn-primary(href="https://t.me/+gQeLE5XAWRsxZjNi" target="_blank") Смотреть свежие отчеты в Телеграм-канале
 			.h4.mb-4 В среднем:
 			+e.row
 				mixin item(t, p)
