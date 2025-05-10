@@ -9,11 +9,13 @@ mixin sFinish(data)
 					| Полистайте мои сделки, пока не надоест бороться со своими сомнениями, и Вы не прислушаетесь к своему желанию.
 					br
 					strong Каждую из этих сделок я выкладывал публично в Телеграм-канале.
-			+defSlider()
-				- for (var i = 1; i < 12; i++) 
-					//- +e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
-					+e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/footer/img-${i}.png`)
-						img(src=`img/footer/img-${i}.png` width="640" height="389" alt="").res-i 
+			+e.item-wrap
+				+e.item-scroll
+					+e.item
+						- for (var i = 1; i < 12; i++) 
+							//- +e.slide.swiper-slide(data-fancybox='modal-slider-rev' data-src=`img/st-review-${i}.png`): +img(`img/st-review-${i}.png`).res-i
+							.review-item(data-fancybox='modal-slider-rev' data-src=`img/footer/img-${i}.png`)
+								img(src=`img/footer/img-${i}.png` width="640" height="389" alt="").res-i 
 			+e.inner
 				.h4.mb-4 Все эти сделки совершались в вальяжном режиме. Спокойно и без нервов.
 					br
